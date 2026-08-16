@@ -1,18 +1,24 @@
 import mongoose from 'mongoose';
 
-let isConnected = false;
+let cached = global._mongooseConn;
+if (!cached) {
+  cached = global._mongooseConn = { conn: null, promise: null };
+}
 
 const connectDB = async () => {
-  if (isConnected) return mongoose.connection;
+  if (cached.conn) return cached.conn;
 
   if (!process.env.MONGO_URI) {
     throw new Error('MONGO_URI is not set in your .env file');
   }
 
-  const conn = await mongoose.connect(process.env.MONGO_URI);
-  isConnected = true;
-  console.log(`MongoDB connected: ${conn.connection.host}`);
-  return conn;
+  if (!cached.promise) {
+    cached.promise = mongoose.connect(process.env.MONGO_URI);
+  }
+
+  cached.conn = await cached.promise;
+  console.log(`MongoDB connected: ${cached.conn.connection.host}`);
+  return cached.conn;
 };
 
 export default connectDB;
