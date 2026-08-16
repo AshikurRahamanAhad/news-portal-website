@@ -5,7 +5,6 @@ import connectDB from './config/db.js';
 
 const app = express();
 
-// Middleware
 app.use(cors({ origin: '*', credentials: true }));
 app.use(express.json());
 app.use(async (req, res, next) => {
