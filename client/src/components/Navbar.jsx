@@ -34,7 +34,7 @@ const Navbar = () => {
         </div>
 
         <form className="nav-bar__search" onSubmit={handleSearch}>
-          <input name="q" type="text" placeholder="Search dispatches…" aria-label="Search articles" />
+          <input name="q" type="text" placeholder="Search Newses…" aria-label="Search articles" />
           <button type="submit">Search</button>
         </form>
 

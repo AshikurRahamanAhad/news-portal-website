@@ -38,7 +38,7 @@ const Home = () => {
   return (
     <div className="page-container">
       <div className="section-heading">
-        <h2>{search ? `Results for "${search}"` : category === 'All' ? 'Latest Dispatches' : category}</h2>
+        <h2>{search ? `Results for "${search}"` : category === 'All' ? 'Latest Newses' : category}</h2>
         <span className="section-heading__rule" />
       </div>
 

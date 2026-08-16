@@ -32,7 +32,7 @@ const ArticlePage = () => {
       <div className="article-page__meta">
         <span className="news-card__category">{article.category}</span>
         <span className="article-page__dateline">
-          DISPATCH · {new Date(article.createdAt).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}
+          News · {new Date(article.createdAt).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}
         </span>
       </div>
       <h1 className="article-page__title">{article.title}</h1>
