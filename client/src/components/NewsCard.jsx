@@ -26,7 +26,7 @@ const NewsCard = ({ news }) => {
             to={`/news/${news._id}`}
             className="text-blue-600 hover:underline font-semibold"
           >
-            Read More &rarr;
+            Read More
           </Link>
         </div>
       </div>
