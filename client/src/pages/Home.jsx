@@ -23,7 +23,7 @@ const Home = () => {
     api
       .get('/news', { params })
       .then((res) => setData(res.data))
-      .catch(() => setError('Could not load articles. Is the backend running?'))
+      .catch(() => setError('Could not load articles. server error.'))
       .finally(() => setLoading(false));
   }, [category, search, page]);
 
