@@ -75,10 +75,9 @@ main {
   outline: 2px solid var(--press-blue);
   outline-offset: 2px;
 }
-
 /* ============================================
-   Masthead + navigation
-   ============================================ */
+   Site header
+   ============================================   */
 .site-header {
   background: var(--paper);
   border-bottom: 3px solid var(--ink);
@@ -194,7 +193,7 @@ main {
 }
 
 /* ============================================
-   Layout containers
+   Layout 
    ============================================ */
 .page-container {
   max-width: var(--max-width);

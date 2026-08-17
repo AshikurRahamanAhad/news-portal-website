@@ -1,6 +1,5 @@
 import Settings from '../models/Settings.js';
 
-// @route  GET /api/settings
 // @access admin only
 export const getSettings = async (req, res) => {
   try {
@@ -15,10 +14,6 @@ export const getSettings = async (req, res) => {
   }
 };
 
-// @route  PUT /api/settings
-// @access admin only
-// @desc   Rotate the reporter/admin secret codes. Either field is optional —
-//         send only the one(s) you want to change.
 export const updateSettings = async (req, res) => {
   try {
     const { reporterSecretCode, adminSecretCode } = req.body;

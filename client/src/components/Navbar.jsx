@@ -17,7 +17,7 @@ const Navbar = () => {
     <header className="site-header">
       <div className="masthead">
         <Link to="/" className="masthead__title">
-          The Bongo
+          The Dispatch
         </Link>
         <span className="masthead__date">
           {new Date().toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}
@@ -34,7 +34,7 @@ const Navbar = () => {
         </div>
 
         <form className="nav-bar__search" onSubmit={handleSearch}>
-          <input name="q" type="text" placeholder="Search Newses…" aria-label="Search articles" />
+          <input name="q" type="text" placeholder="Search dispatches…" aria-label="Search articles" />
           <button type="submit">Search</button>
         </form>
 

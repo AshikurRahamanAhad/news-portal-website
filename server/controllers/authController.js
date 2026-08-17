@@ -2,7 +2,6 @@ import User from '../models/User.js';
 import Settings from '../models/Settings.js';
 import generateToken from '../utils/generateToken.js';
 
-// Shape a user for API responses (never send the password back)
 const toSafeUser = (user) => ({
   id: user._id,
   name: user.name,
@@ -10,10 +9,6 @@ const toSafeUser = (user) => ({
   role: user.role,
 });
 
-// @route  POST /api/auth/register
-// @desc   Register a new user. Registering as 'reporter' or 'admin'
-//         requires the matching secret code, which admins can rotate
-//         live from Dashboard > Settings (stored in the database).
 export const register = async (req, res) => {
   try {
     const { name, email, password, role, secretCode } = req.body;
@@ -48,7 +43,6 @@ export const register = async (req, res) => {
   }
 };
 
-// @route  POST /api/auth/login
 export const login = async (req, res) => {
   try {
     const { email, password } = req.body;
@@ -69,7 +63,6 @@ export const login = async (req, res) => {
   }
 };
 
-// @route  GET /api/auth/me
 export const getMe = async (req, res) => {
   res.json({ user: toSafeUser(req.user) });
 };
