@@ -19,11 +19,13 @@ const Navbar = () => {
         <Link to="/" className="masthead__title">
           The News
         </Link>
-        <span className="masthead__date">
+        <span>
+        <div className="masthead__date">
           {new Date().toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}
-        </span>
-        <span className="masthead__date">
+        </div>
+        <div className="masthead__date">
            {new Date().toLocaleDateString('bn-BD', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}
+        </div>
         </span>
       </div>
 
