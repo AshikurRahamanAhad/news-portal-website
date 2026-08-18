@@ -22,6 +22,9 @@ const Navbar = () => {
         <span className="masthead__date">
           {new Date().toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}
         </span>
+        <span className="masthead__date">
+           {new Date().toLocaleDateString('bn-BD', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}
+        </span>
       </div>
 
       <nav className="nav-bar">
