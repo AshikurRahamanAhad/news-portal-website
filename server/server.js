@@ -9,7 +9,11 @@ import settingsRoutes from './routes/settingsRoutes.js';
 const app = express();
 
 app.use(cors({ origin: process.env.CLIENT_URL || 'http://localhost:5173', credentials: true }));
-app.use(express.json({ limit: '5mb' })); // higher limit to allow base64 image uploads
+app.use(express.json({ limit: '5mb' })); // higher limit to allow image uploads is 5MB
+
+app.get('/health', (req, res) => {
+  res.status(200).send('The API is healthy');
+}); // /health route for check the API
 
 app.get('/', (req, res) => {
   res.send('News Portal API is running');
